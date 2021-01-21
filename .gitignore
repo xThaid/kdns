@@ -1,0 +1,10 @@
+# kernel module compile output
+*.o
+*.o.d
+*.ko
+*.o.cmd
+*.ko.cmd
+*.mod*
+*.symvers
+modules.order
+.Module.symvers.cmd
