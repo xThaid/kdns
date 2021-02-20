@@ -111,8 +111,6 @@ int kdns_query(u8 *req, size_t reqsize, u8 *resp) {
 	resp_header.qr = 1;
 	resp_header.rd = req_header.rd;
 
-	pr_info("dns request id=%d, nquestions=%d\n", req_header.id, req_header.nquestions);
-
 	if (!dns_is_valid_request(&req_header)) {
 		resp_header.rcode = 1;
 		goto end;
@@ -130,7 +128,6 @@ int kdns_query(u8 *req, size_t reqsize, u8 *resp) {
 		for (int i = 0; i < anscnt; i++)
 			respsize += dns_answer_encode(resp + respsize, &answers[i]);
 	}
-		pr_info("%d\n", anscnt);
 
 end:
 	dns_header_encode(resp, &resp_header);

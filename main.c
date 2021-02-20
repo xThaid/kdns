@@ -105,7 +105,6 @@ static int kdns_daemon(void *arg) {
             pr_err("recv error %d\n", reqsize);
             break;
         }
-        pr_info("received msg len=%d\n", reqsize);
 
         respsize = kdns_query(recv_buf, reqsize, resp_buf);
 

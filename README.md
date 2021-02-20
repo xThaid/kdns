@@ -8,7 +8,7 @@ I would highly recommend not to use this module in your host system. It is very 
 Tested on kernel version 5.9.2.
 
 ## Usage
-To compile the module just enter the directory and run (to do this you must have the Linux headers installed on your device.):
+To compile the module just enter the directory and run (to do this you must have the Linux headers installed on your device):
 ```
 make
 ```
